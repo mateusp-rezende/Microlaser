@@ -6,12 +6,12 @@ var cardapio = {}
 
 var MEU_CARRINHO = []
 
-var CELULAR = '5562996096028';
+var CELULAR = '5562981030357';
 
 var MEU_ENDERECO = null;
 
 var VALOR_CARRINHO = 0;
-var VALOR_ENTREGA = 5;
+var VALOR_ENTREGA = 0;
 
 cardapio.eventos = {
     inicio: () => {
@@ -469,12 +469,12 @@ carregarValores: ()=>{
         });
 
         // Após construir itens, construir o texto do pedido
-        var texto = 'Olá gostaria de fazer um pedido:';
-        texto += `\n*Itens do pedido:* \n\n${itens}`;
-        texto += '\n*Endereço de entrega:* ';
+        var texto = 'Olá gostaria de fazer o seguinte orçamento:';
+        texto += `\n*Itens :* \n\n${itens}`;
+        texto += '\n*e sou de:* ';
         texto += `${MEU_ENDERECO.endereco}, N°${MEU_ENDERECO.numero}, ${MEU_ENDERECO.bairro}, `;
         texto += `${MEU_ENDERECO.cidade}-${MEU_ENDERECO.uf} / ${MEU_ENDERECO.cep} ${MEU_ENDERECO.complemento} `;
-        texto += `\n\n*Total (com entrega): R$ ${(VALOR_CARRINHO + VALOR_ENTREGA).toFixed(2).replace('.', ',')}* `;
+        texto += '\n*, quanto fica o orçamento?* ';
 
         // Converter a URL
         let encodedText = encodeURI(texto);
@@ -562,7 +562,7 @@ cardapio.templates = {
              </div>
                <p class="desc text-center "><b> <a class="link-desc" href="/desc.html"> <i class="fa fa-eye"></i> Ver descrição</a> </b></p>
              <p class="title-produto text-center mt-4 "><b>\${nome}</b></p>
-             <p class="preco-produto text-center"><b>  \${preco}</b></p>
+             
              <div class="add-car">
                  <span class="btn-menos"><i class="fas fa-minus" onclick="cardapio.metodos.diminuirQuant('\${id}')"></i></span>
                  <span class="add-num-itens" id="qntd-\${id}">0</span>
@@ -581,7 +581,7 @@ cardapio.templates = {
      </div>
      <div class="dados-produto">
          <p class="title-produto"><b>\${nome}</b></p>
-         <p class="preco-produto"><b>R$ \${preco}</b></p>
+        
      </div>
      <div class="add-car">
      <span class="btn-menos"><i class="fas fa-minus" onclick="cardapio.metodos.diminuirQuantCarrinho('\${id}')"></i></span>
@@ -602,7 +602,7 @@ cardapio.templates = {
   <b>\${nome}</b>
   </p>
   <p class="preco-produto-resumo">
-  <b>R$ \${preco}</b>
+ 
   </p>
  </div>
 
@@ -623,7 +623,7 @@ itemDesc:`
   <b>\${nome}</b>
   </p>
   <p class="preco-produto-resumo">
-  <b>R$ \${preco}</b>
+  
   </p>
  </div>
 

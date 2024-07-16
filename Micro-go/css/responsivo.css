@@ -72,6 +72,14 @@
         font-size: 18px;
     }
 
+    .reserva {
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
     .btn-yellow, .btn-white{
         font-size: 18px;
         padding: 13px 23px;

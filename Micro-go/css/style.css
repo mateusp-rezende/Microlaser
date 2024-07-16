@@ -170,8 +170,9 @@ b{
 .img-banner img{
  position: absolute;
  width: 300px;
- top: 62px;
- right: 60px ;
+ top:-25px;
+ right: 0;
+ border-radius: 30px;
 }
 .img-banner iframe{
     width: 100%;
@@ -504,9 +505,10 @@ footer{
 .container-logo-footer, .container-texto-footer, .container-redes-footer{
  display: flex;
  align-items: center;
+ justify-content: center;
 }
 .container-logo-footer{
-    justify-content: start;
+    justify-content: center;
 }
 .container-texto-footer{
     justify-content: center;
@@ -524,7 +526,7 @@ footer{
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 50px;
+    padding: 20px;
     background-color: var(--color-white);
     z-index: 9990;
     overflow-x: hidden;
@@ -537,6 +539,7 @@ footer{
     padding-bottom: 20px;
 }
 .m-body{
+    
     flex: 1;
     overflow: auto;
     overflow-x: hidden; 
