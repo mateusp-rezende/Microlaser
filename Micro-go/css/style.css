@@ -167,10 +167,17 @@ b{
     right: 0;
     top: 0;
 }
-.img-banner img{
+.banner .img-banner img{
+    position: absolute;
+    width: 300px;
+    top:62px;
+    right: 52px;
+    border-radius: 30px;
+   }
+.reserva .img-banner img{
  position: absolute;
  width: 300px;
- top:-25px;
+ top:-20px;
  right: 0;
  border-radius: 30px;
 }
@@ -526,7 +533,7 @@ footer{
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 20px;
+    padding: 50px;
     background-color: var(--color-white);
     z-index: 9990;
     overflow-x: hidden;
@@ -539,7 +546,6 @@ footer{
     padding-bottom: 20px;
 }
 .m-body{
-    
     flex: 1;
     overflow: auto;
     overflow-x: hidden; 
