@@ -1,3 +1,4 @@
+
 var MENU = {
     "consumiveis": [
         {
@@ -14,28 +15,28 @@ var MENU = {
             "id": "mamografo-konica",
             "img": "./img/cardapio/equipamentos/mamografo.jpg",
             "nome": "Mamografo konica",
-            "dsc": "",
+            "dsc": "O mamógrafo Delicata 10 oferece segurança, precisão e conforto tanto ao paciente quanto ao profissional da saúde. Seu braço isocêntrico possibilita a obtenção de uma imagem de alta qualidade e precisão diagnóstica, eliminando a necessidade de ajuste de posicionamento nas projeções laterais, o que possibilita melhor fluxo de trabalho durante o exame.Características principais: Tubo de alta qualidade e durabilidade.Sistema de compressão motorizado, com ajuste manual que garante segurança e eficiência.Compatível com todos os modelos de digitalizadores. Excelência na qualidade da imagem.",
             "preco": 0.00
         },
         {
             "id": "cr-sigma",
             "img": "./img/cardapio/equipamentos/cr-sigma.jpg",
             "nome": "CR digitalizador",
-            "dsc": "",
+            "dsc": "descrição",
             "preco": 0.00
         },
         {
             "id": "aero-dr",
             "img": "./img/cardapio/equipamentos/aeroDr.jpg",
             "nome": "Raio-X Aero DR",
-            "dsc": "",
+            "dsc": "descrição",
             "preco": 0.00
         },
         {
             "id": "cr-sigma",
             "img": "./img/cardapio/equipamentos/rx-altus.jpg",
             "nome": "Raio X Altus",
-            "dsc": "",
+            "dsc": "descrição",
             "preco": 0.00
         },
     ],

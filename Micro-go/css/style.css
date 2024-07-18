@@ -35,7 +35,7 @@
 }
 
 html,body{
-    background-color: var(--color-background);
+   background-color: var(--color-background);
     font-family: 'PoppinsRegular', 'sans-serif', 'Arial', 'Rubik';
     color: var(--color-text) !important;
   
@@ -259,14 +259,7 @@ b{
     margin-bottom: 10px;
     
 }
-.background-servicos{
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 500px;
-    background-image: url(/img/bg-icons-2.png);
-   
-}
+
 
 .cardapio{
     padding-top: 50px;
@@ -276,8 +269,9 @@ b{
     position: absolute;
     left: 0;
     right: 0;
-    height: 500px;
-    background-image: url(/img/bg-icons-1.png);
+    width: 200%;
+    height:500px;
+    
 }
 
 .card-item{
@@ -386,13 +380,7 @@ b{
 }
 
 
-.background-depoimentos{
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 500px;
-    background-image: url(/img/bg-icons-1.png);
-}
+
 .depoimentos{
  
     padding-top: 100px;
@@ -843,5 +831,48 @@ select.form-control{
 
 .toast.green{
     background-color: var(--color-green);
+}
+
+/*descrição*/
+.btn-desc{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 450px;
+    margin: auto;
+}
+.desc-card{
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.title-desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--color-black);
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'PoppinsMedium', 'sans-serif';
+}
+
+.desc-produto {
+    color: var(--color-text-out);
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.img-produto-desc {
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,.1);
+}
+.direction{
+    flex-direction: row;
 }
 

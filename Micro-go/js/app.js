@@ -16,6 +16,7 @@ var VALOR_ENTREGA = 0;
 cardapio.eventos = {
     inicio: () => {
         cardapio.metodos.obterItensCardapio();
+        cardapio.metodos.carregarDescricao();
         cardapio.metodos.carregarBotaoReserva();
         cardapio.metodos.carregarBotaoligar();
         cardapio.metodos.carregarBotaoWhatsapp();
@@ -26,6 +27,7 @@ cardapio.eventos = {
 
 cardapio.metodos = {
     //obtem a lista dos itens do cardapio/catalogo/produtos
+    
     obterItensCardapio: (categoria = 'equipamentos', vermais = false) =>{
             var filtro = MENU[categoria];
             console.log(filtro);
@@ -81,9 +83,6 @@ cardapio.metodos = {
         $("#btnVerMais").addClass('hidden');
     },
 
-    VerDesc: ( ) =>{
-          
-    },
  // botao de mais e menos na paginação de produtos
     diminuirQuant: (id) => {
         // converte para inteiro  e se for maior que zero subtrai 1 und
@@ -225,6 +224,7 @@ carregarEtapa: (etapa) =>{
         $("#btnVoltar").removeClass('hidden') 
        
    }
+  
 },
 // ele volta etapas
 voltarEtapa: () =>{
@@ -468,13 +468,16 @@ carregarValores: ()=>{
             itens += `*${e.qntd}x* ${e.nome} ....... R$ ${e.preco.toFixed(2).replace('.', ',')}\n`;
         });
 
-        // Após construir itens, construir o texto do pedido
-        var texto = 'Olá gostaria de fazer o seguinte orçamento:';
-        texto += `\n*Itens :* \n\n${itens}`;
-        texto += '\n*e sou de:* ';
-        texto += `${MEU_ENDERECO.endereco}, N°${MEU_ENDERECO.numero}, ${MEU_ENDERECO.bairro}, `;
-        texto += `${MEU_ENDERECO.cidade}-${MEU_ENDERECO.uf} / ${MEU_ENDERECO.cep} ${MEU_ENDERECO.complemento} `;
-        texto += '\n*, quanto fica o orçamento?* ';
+      // Após construir os itens, construir o texto do pedido
+    var texto = `Olá,sou de ${MEU_ENDERECO.cidade} gostaria de solicitar um orçamento para os seguintes itens:`;
+    texto += `\n\n\n${itens}`;
+    texto += '\n\nGostaria de saber o valor do orçamento.';
+    texto += '\n\n Meu endereço completo é:';
+    texto += `${MEU_ENDERECO.endereco}, Nº ${MEU_ENDERECO.numero}, ${MEU_ENDERECO.bairro}, `;
+    texto += `${MEU_ENDERECO.cidade}-${MEU_ENDERECO.uf}, CEP: ${MEU_ENDERECO.cep} ${MEU_ENDERECO.complemento}`;
+   
+
+
 
         // Converter a URL
         let encodedText = encodeURI(texto);
@@ -488,7 +491,7 @@ carregarValores: ()=>{
  },
 
  carregarBotaoReserva: () =>{
-    var texto = 'Olá gostaria de fazer uma *reserva*.';
+    var texto = 'Olá gostaria de fazer um agendamento.';
 
     let encodedText = encodeURI(texto);
     let url = `https://wa.me/${CELULAR}?text=${encodedText}`;
@@ -544,7 +547,30 @@ carregarValores: ()=>{
         }, 1000)
        
     }, tempo)
-  }
+  },
+
+  
+  verDescricao: (id) => {
+    // Obtem a categoria ativa
+    var categoria =  $(".container-menu a.active").attr('id').split('menu-')[1];
+    
+    // Obtem a lista de itens
+    let filtro = MENU[categoria];
+
+    // Obtem o item
+    let item = $.grep(filtro, (e, i) => { return e.id == id });
+
+    if (item.length > 0) {
+        // Armazena o item no localStorage para ser recuperado na página de descrição
+        localStorage.setItem('itemDescricao', JSON.stringify(item[0]));
+        
+        // Redireciona para a página de descrição
+        window.location.href = 'desc.html';
+    }
+}
+
+
+  
 
 
     
@@ -560,7 +586,14 @@ cardapio.templates = {
              <div class="img-produto">
                  <img src="\${img}" alt="">
              </div>
-               <p class="desc text-center "><b> <a class="link-desc" href="/desc.html"> <i class="fa fa-eye"></i> Ver descrição</a> </b></p>
+            
+               <p class="desc text-center ">
+                <b>
+                    <a onclick="cardapio.metodos.verDescricao('\${id}')" class="link-desc" href="javascript:void(0)">
+                        <i class="fa fa-eye"></i> Ver descrição
+                    </a>
+                </b>
+                </p>
              <p class="title-produto text-center mt-4 "><b>\${nome}</b></p>
              
              <div class="add-car">
@@ -611,22 +644,20 @@ cardapio.templates = {
  </p>
 </div>`,
 
-
-itemDesc:`
-<div class="col-12 item-carrinho resumo">
- <div class="img-produto-resumo">
- <img src="\${img}">
- </div>
-
- <div class="dados-produto">
-  <p class="title-produto-resumo">
-  <b>\${nome}</b>
-  </p>
-  <p class="preco-produto-resumo">
-  
-  </p>
- </div>
+itemDesc: `
+<div class="col-12">
+    <div class="">
+        <p><b>\${nome}</b></p>
+        <p class="text">\${dsc}</p>
+    </div>
+</div>
+<div class="img-desc col-6">
+    <div class="d-flex img-banner wow fadeIn delay-07s">
+        <img class="wow fadeIn delay-07s" src="\${img}" alt="">
+    </div>
+</div>
+`
 
 
-</div>`,
+
 }

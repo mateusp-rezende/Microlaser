@@ -1,11 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>descrição do produto</title>
+    <title>Descrição do Produto</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/fontawesome.css"/>
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsivo.css">
 </head>
 <body>
+  
+    <div class="row">
+        <div id="descricaoProduto"></div>
+
+      
+    </div>
     
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var item = JSON.parse(localStorage.getItem('itemDescricao'));
+
+           
+
+            if (item) {
+                let descricaoTemplate = `
+    <div class="desc-card">
+         <div class="btn-desc">
+        <a class="btn-white" href="/index.html">Voltar</a>
+    </div>
+                     
+                 <div class="container">
+        <div class="row col-12">
+            <h1 class="title-desc">${item.nome}</h1>
+        </div>  
+        <div class="row">
+            
+            <div class="col-sm-12 col-one col-lg-6 col-md-12">
+                <img class="img-produto-desc" src="${item.img}" alt="${item.nome}">
+            </div> 
+              <div class=" col-sm-12 col-one col-lg-6 col-md-12">
+                <p class="desc-produto">${item.dsc}</p>
+            </div> 
+        </div>
+       </div>
+      
+
+    </div> 
+
+    
+                `;
+                
+                $('#descricaoProduto').html(descricaoTemplate);
+            } else {
+                $('#descricaoProduto').html('<p>Produto não encontrado.</p>');
+            }
+        });
+    </script>
 </body>
 </html>
