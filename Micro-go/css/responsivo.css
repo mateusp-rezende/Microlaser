@@ -1,234 +1,174 @@
-/*DESKTOP (col-lg) 992PX+ */
-@media (min-width: 992px){
+/* ==========================================================================
+   MICROLASER MEDTECH - RESPONSIVIDADE & BREAKPOINTS
+   ========================================================================== */
 
-}
-
-/*TABLET E DESKTOP (col-md) 768PX - 991PX  */
-@media (min-width: 768px) and (max-width: 991px){
-
-}
-
-
-/* TABLET (col-sm) 576PX - 767PX */
-@media (min-width: 576px) and (max-width: 767px){
-
-}
-
-/* TABLET E CELULARES (col) 0 -  767PX */
-
-
-@media (max-width: 767px){
-
-   .no-mobile{
-    display: none !important;
-   }
-
-    .col-one{
-        padding-left: 35px !important;
-        padding-right: 35px !important;
+/* TELAS GRANDES (Desktop) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1180px;
     }
+}
 
-   
-
-    .navbar-toggler-icon{
-        padding-top: 5px;
-    }
-
-    .navbar-collapse{
-        background-color: var(--color-secondary);
-        margin-top: 20px;
+/* TABLETS E TELAS MÉDIAS (max-width: 991px) */
+@media (max-width: 991px) {
+    .header-fixed .navbar-collapse {
+        background-color: var(--bg-surface);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
         padding: 20px;
-        text-align: center;
-        border-radius: 40px;
-
+        margin-top: 14px;
+        box-shadow: var(--shadow-card);
     }
 
-    .navbar-collapse .btn-white{
-        margin-top: 20px;
+    .navbar-nav {
+        margin-bottom: 16px;
     }
 
-
-    .navbar-collapse .btn-icon{
-        
-        padding-right:20px ;
-       
+    .hero-title {
+        font-size: 38px;
     }
 
-    .navbar-collapse .btn-icon span.icon{
-       display: none;
+    .hero-desc {
+        font-size: 16px;
     }
 
-    .banner, .servicos, .cardapio, .depoimentos{
-        padding-top: 50px;
-        padding-bottom: 50px;
-
+    .trust-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .text-banner h1{
-        font-size: 36px;
+    .modal-descricao-body {
+        grid-template-columns: 1fr;
     }
 
-    .text-banner p{
-        font-size: 18px;
+    .modal-descricao-img-container {
+        height: 240px;
     }
+}
 
-    .reserva {
-        font-size: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+/* CELULARES E SMARTPHONES (max-width: 767px) */
+@media (max-width: 767px) {
+    .top-bar-notice {
+        font-size: 11px;
         text-align: center;
     }
 
-    .btn-yellow, .btn-white{
-        font-size: 18px;
-        padding: 13px 23px;
-        margin-bottom: 10px;
-    }
-    .direction{
-        flex-direction: column;
-    }
-    
-.img-produto-desc {
-    width: 100%;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    box-shadow: 0px 10px 15px -3px rgba(0,0,0,.1);
-}
-.desc-produto {
-    color: var(--color-text-out);
-    font-size: 16px;
-   
-}
-    
-
-    .btn-icon-left{
-        padding-left: 63px !important;
+    .hero-section {
+        padding-top: 130px;
+        padding-bottom: 40px;
+        text-align: center;
     }
 
-    .btn-icon-left span.icon-left{
-        width: 43px;
-        height: 43px;
-        margin-left: -56px;
-    }
-
-    .title{
+    .hero-title {
         font-size: 30px;
+        line-height: 1.22;
     }
 
-    .container-menu{
-        overflow-x: auto;
-        overflow-y: hidden;
-        display: flex;
-        padding-bottom: 15px;
-        flex-direction: row;
+    .hero-desc {
+        font-size: 15px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .img-produto{
-        position: absolute;
-        left: 15px;
-
-    }
-
-    .card-item{
-        height: 110px;
-        padding-left: 110px;
-        justify-content: center;
-        align-items: start;
-    }
-
-    .card-item .img-produto img{
-        width: 80px;
-    }
-
-    .title-produto{
-        margin-top: 0 !important;
-        height: 30px !important;
-        width: 100%;
-        text-align: left !important;
-
-    }
-
-    .preco-produto{
-        margin-bottom: 0px !important;
-        margin-top: 0px !important;
-        font-size: 22px !important;
-    }
-
-    .card-item .add-carrinho{
-        margin-top: 5px;
-        
-    }
-
-    #itensCardapio .mb-5{
-        margin-bottom: 15px !important;
-    }
-
-    .card-secondary{
-        padding: 45px;
-    }
-
-    .container-logo-footer{
+    .hero-cta-group {
         justify-content: center;
     }
 
-    .container-texto-footer p{
+    .hero-metrics {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
         text-align: center;
     }
 
-    .container-redes-footer{
-        margin-top: 40px;
-        margin-bottom: 50px;
+    .metric-item h4 {
+        font-size: 22px;
+    }
+
+    .metric-item p {
+        font-size: 10px;
+    }
+
+    .hero-card-preview {
+        margin-top: 30px;
+    }
+
+    .hero-card-preview img {
+        height: 260px;
+    }
+
+    .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .container-menu {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 10px;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .category-tab-btn {
+        flex-shrink: 0;
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+
+    .btn-carrinho {
+        bottom: 16px;
+        right: 16px;
+        width: 52px;
+        height: 52px;
+        font-size: 20px;
+    }
+
+    .btn-whatsapp-floating {
+        bottom: 78px;
+        right: 16px;
+        width: 52px;
+        height: 52px;
+        font-size: 24px;
+    }
+
+    .contact-card-box {
+        padding: 24px 18px;
+    }
+
+    .modal-descricao-content {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .modal-cart-window {
+        margin: 10px;
+    }
+
+    .m-header, .m-body, .m-footer {
+        padding: 18px 20px;
+    }
+
+    .footer-brand {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .footer-brand p {
+        margin: 0 auto;
+    }
+
+    .footer-certificates {
         justify-content: center;
     }
 
-    .modal-full{
-        padding: 40px;
-
+    .footer-social-links {
+        justify-content: center;
     }
 
-    .modal-full .item-carrinho{
-        padding-left: 0;
-        padding-right: 0;
-
+    .footer-bottom {
+        text-align: center;
     }
-
-    .modal-full .img-produto{
-        position: relative;
-        left: 0;
-
-    }
-
-    .modal-full .img-produto img{
-       width: 50px;
-        
-    }
-
-    .modal-full .dados-produto{
-       padding-left: 15px;
-       padding-right: 15px;
-       display: grid;
-        
-    }
-
-    .modal-full .title-produto, .modal-full .desc, .modal-full .preco-produto, .modal-full .form-control{
-        font-size: 16px !important;
-        
-    }
-
-    .modal-full .add-numero-itens{
-        padding: 2px 10px;
-    }
-
-    
-
-
-
-    
-
-
-
-
-
-
 }

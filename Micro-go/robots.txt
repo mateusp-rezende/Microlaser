@@ -1,0 +1,12 @@
+# robots.txt para Microlaser Hospitalar (Goiânia - GO)
+# https://microlaser-go.com.br/
+
+User-agent: *
+Allow: /
+Allow: /img/
+Allow: /css/
+Allow: /js/
+
+# Sitemap Oficial
+Sitemap: https://microlaser-go.com.br/sitemap.xml
+
