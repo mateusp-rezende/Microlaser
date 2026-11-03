@@ -78,14 +78,18 @@ html.dark {
 }
 
 @layer base {
-  html, body {
+  html {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
   }
   body {
-    overscroll-behavior-y: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: clip;
     background-color: var(--ix-bg-base);
     color: var(--ix-text-primary);
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -284,17 +288,18 @@ html.dark {
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f8f9ff;
+  background: #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #cbd5e1;
-  border-radius: 3px;
+  border-radius: 5px;
+  border: 2px solid #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -365,10 +370,9 @@ p, li {
   text-wrap: pretty;
 }
 
-/* Prevenção de Overflow Horizontal em 390px (B10 Mobile Check) */
+/* Prevenção de Overflow Horizontal Segura sem bloquear rolagem de tela */
 html, body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* Botões: Curva de Transição Base B7 e Feedback Físico Ativo B9 */

@@ -712,6 +712,23 @@
         });
       }
     });
+
+    // Rolagem suave dedicada apenas para links de âncora (#), mantendo a rolagem natural do mouse/touch 100% nativa e direta
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href && href !== '#' && href.startsWith('#')) {
+          const targetEl = document.querySelector(href);
+          if (targetEl) {
+            e.preventDefault();
+            targetEl.scrollIntoView({ behavior: 'smooth' });
+            if (history.pushState) {
+              history.pushState(null, null, href);
+            }
+          }
+        }
+      });
+    });
   });
 
   // Exportação segura para window para manter compatibilidade com onclick inline existentes
