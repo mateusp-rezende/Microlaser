@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://microlaser.rznd.tec.br/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    
+    <!-- Imagem Hero Principal -->
+    <image:image>
+      <image:loc>https://microlaser.rznd.tec.br/img/hero-aerodr-sala.jpg</image:loc>
+      <image:title>Aparelho de Raio-X Hospitalar e Sistema AeroDR Konica Minolta - Microlaser</image:title>
+      <image:caption>Venda, compra, locação e assistência técnica de Raio-X em Goiás, Pará e todo o Brasil</image:caption>
+    </image:image>
+
+    <!-- Logo Institucional -->
+    <image:image>
+      <image:loc>https://microlaser.rznd.tec.br/img/logo.png</image:loc>
+      <image:title>Microlaser Equipamentos Hospitalares</image:title>
+      <image:caption>Microlaser - Soluções em Radiologia e Engenharia Clínica desde 1999</image:caption>
+    </image:image>
+
+    <!-- Sistema DR Sem Fio AeroDR -->
+    <image:image>
+      <image:loc>https://microlaser.rznd.tec.br/img/catalogo/equipamentos/aeroDr.jpg</image:loc>
+      <image:title>Detector Digital DR Sem Fio AeroDR Konica Minolta</image:title>
+      <image:caption>Painel detector digital direto CsI para modernização de Raio-X com alta resolução</image:caption>
+    </image:image>
+
+    <!-- Digitalizador CR Regius Sigma II -->
+    <image:image>
+      <image:loc>https://microlaser.rznd.tec.br/img/catalogo/equipamentos/cr-sigma.jpg</image:loc>
+      <image:title>Digitalizador de Raio-X CR Regius Sigma II Konica Minolta</image:title>
+      <image:caption>Leitor CR ultracompacto para digitalização de exames radiográficos hospitalares</image:caption>
+    </image:image>
+
+    <!-- Raio-X Altus HF -->
+    <image:image>
+      <image:loc>https://microlaser.rznd.tec.br/img/catalogo/equipamentos/rx-altus.jpg</image:loc>
+      <image:title>Aparelho de Raio-X Hospitalar Altus HF Fixo e Móvel</image:title>
+      <image:caption>Gerador de alta frequência 30kW e 50kW para radiologia geral e emergência leito</image:caption>
+    </image:image>
+
+    <!-- Mamógrafo Delicata 10 -->
+    <image:image>
+      <image:loc>https://microlaser.rznd.tec.br/img/catalogo/equipamentos/mamografo.jpg</image:loc>
+      <image:title>Mamógrafo Hospitalar de Alta Resolução Delicata 10</image:title>
+      <image:caption>Sistema de mamografia para diagnóstico precoce e rastreamento mamário</image:caption>
+    </image:image>
+
+    <!-- Filmes Drypro SD-Q -->
+    <image:image>
+      <image:loc>https://microlaser.rznd.tec.br/img/catalogo/consumiveis/filme-sdq.jpg</image:loc>
+      <image:title>Filmes Radiológicos Drypro SD-Q Konica Minolta</image:title>
+      <image:caption>Filmes a laser a seco para impressoras DRYPRO 793, 873 e 832</image:caption>
+    </image:image>
+
+    <!-- Químicos e Insumos Radiológicos -->
+    <image:image>
+      <image:loc>https://microlaser.rznd.tec.br/img/catalogo/consumiveis/revelador-rx-auto.jpg</image:loc>
+      <image:title>Revelador Radiológico Hospitalar para Processadora Automática</image:title>
+      <image:caption>Químico concentrado para processamento automático de películas radiográficas</image:caption>
+    </image:image>
+  </url>
+</urlset>
+
